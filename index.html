@@ -43,13 +43,12 @@
             pointer-events: none;
         }
 
-        /* Layout wrapper to handle central content and side image */
         .layout-wrapper {
             display: flex;
             justify-content: center;
             align-items: flex-start;
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
             position: relative;
             z-index: 2;
         }
@@ -88,20 +87,23 @@
             color: #a0a0a8;
         }
 
-        /* Side Image Styling */
+        /* Shifted lower down, further to the right, and made significantly larger */
         .side-image-container {
             position: absolute;
-            right: -40px;
-            top: 250px; 
-            max-width: 340px;
+            right: -120px;
+            top: 380px; 
+            max-width: 480px;
             width: 100%;
         }
 
         .side-image {
             width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            outline: none !important;
+            mix-blend-mode: normal;
         }
 
         .cta-container {
@@ -174,8 +176,7 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Smooth adjustments for smaller screens so things don't layout messily */
-        @media (max-width: 1100px) {
+        @media (max-width: 1250px) {
             .layout-wrapper {
                 flex-direction: column;
                 align-items: center;
